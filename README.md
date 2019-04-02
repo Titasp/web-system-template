@@ -18,30 +18,28 @@ My system will allow users to get and store facts about cats (ha ha ha).
 
 
 ## API definition
+- GET /api/v1/fact/{fact_id} - gets fact by its id
+- GET /api/v1/facts - gets all facts
+- GET /api/v1/author/{author_id}/facts - gets all facts of this author
+- POST /api/v1/fact - adds new cat fact to the system
+- PUT /api/v1/fact/{fact_id} - modifies existing cat fact
+- DELETE /api/v1/fact/{fact_id} - deletes cat fact from the system
 
-
-GET /api/v1/fact/{fact_id} - gets fact by its id
-GET /api/v1/facts - gets all facts
-GET /api/v1/author/{author_id}/facts - gets all facts of this author
-POST /api/v1/fact - adds new cat fact to the system
-PUT /api/v1/fact/{fact_id} - modifies existing cat fact
-DELETE /api/v1/fact/{fact_id} - deletes cat fact from the system
-
-- [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
+- [x] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
-- [ ] API should have at least 4 methods
-    - [ ] A method to return entity by ID. Should not have request body
-    - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
+- [x] API should have at least 4 methods
+    - [x] A method to return entity by ID. Should not have request body
+    - [x] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
         - [ ] Return only entities that match pattern in one of its attributes
         - [ ] Return 10 entities starting provided index
-        - [ ] Return sorted entities by one of its attributes (both ascending and descending)
+        - [x] Return sorted entities by one of its attributes (both ascending and descending)
         - [ ] Other (should be approved by Product Owner (PO))
-    - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
-    - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
-- [ ] Each method should have HTTP method defined
-- [ ] Each method should have URI defined (use {id} as entity ID placeholder)
-- [ ] Should return all 4xx errors in unified format. Define format using `joi` language
-- [ ] Should return all 5xx errors in unified format. Define format using `joi` language
+    - [x] A method to remove entity by ID. Returns removed entity. Should not have request body
+    - [x] A method to update entity by ID. Accepts entity to update and returns updated entity
+- [x] Each method should have HTTP method defined
+- [x Each method should have URI defined (use {id} as entity ID placeholder)
+- [x] Should return all 4xx errors in unified format. Define format using `joi` language
+- [x] Should return all 5xx errors in unified format. Define format using `joi` language
 
 ## UI definition
 - [ ] Define the structure of how visually the WEB system is going to look like
