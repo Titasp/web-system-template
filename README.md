@@ -1,21 +1,32 @@
-# WEB system
-- [ ] Replace "WEB system" with your system name
+# Cat Facts API
+
 
 ## Description
-- [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+My system will allow users to get and store facts about cats (ha ha ha).
 
 ## Entity definition
-- [ ] Define the entity ("object" that will be manipulated) of WEB system
-- [ ] Entity should have a name
-- [ ] Entity should have 3 mandatory attributes:
-    - [ ] ID - depending on specific service this could be a number or string
-    - [ ] Creation date - (if applicable for specific service) ISO 8601 format date string
-    - [ ] Modification date - (if applicable for specific service) ISO 8601 format date string
-- [ ] Entity should have at least 5 custom attributes
-    - [ ] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
-    - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
+
+### Cat fact:
+- id - integer
+- creation_date - ISO 8601 (i.e.: 2010-01-01T00:01:12.123Z+03:00)
+- modification_date - ISO 8601
+- reality_meter -  integer (0 <= x <= 5)
+- title - string (x.len() <= 50)
+- content - string (x.len() < 500)
+- language - string (x.len() <= 3)
+- author - string (x.len() < 100)
+
 
 ## API definition
+
+
+GET /api/v1/fact/{fact_id} - gets fact by its id
+GET /api/v1/facts - gets all facts
+GET /api/v1/author/{author_id}/facts - gets all facts of this author
+POST /api/v1/fact - adds new cat fact to the system
+PUT /api/v1/fact/{fact_id} - modifies existing cat fact
+DELETE /api/v1/fact/{fact_id} - deletes cat fact from the system
+
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
 - [ ] API should have at least 4 methods
