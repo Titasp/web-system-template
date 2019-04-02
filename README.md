@@ -37,7 +37,7 @@ My system will allow users to get and store facts about cats (ha ha ha).
     - [x] A method to remove entity by ID. Returns removed entity. Should not have request body
     - [x] A method to update entity by ID. Accepts entity to update and returns updated entity
 - [x] Each method should have HTTP method defined
-- [x Each method should have URI defined (use {id} as entity ID placeholder)
+- [x] Each method should have URI defined (use {id} as entity ID placeholder)
 - [x] Should return all 4xx errors in unified format. Define format using `joi` language
 - [x] Should return all 5xx errors in unified format. Define format using `joi` language
 
