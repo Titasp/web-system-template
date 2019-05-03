@@ -38,6 +38,21 @@ My system will allow users to get and store word definitions.
 - [x] Should return all 4xx errors in unified format. Define format using `joi` language
 - [x] Should return all 5xx errors in unified format. Define format using `joi` language
 
+4xx error format:
+```json
+{
+   "message": object 
+}
+```
+
+5xx error format:
+```json
+{
+  "message": object
+}
+```
+
+
 ## UI definition
 ![](view_wireframe.png)
 
