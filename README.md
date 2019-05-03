@@ -1,29 +1,26 @@
-# Cat Facts API
+# Word Definitions API
 
 
 ## Description
-My system will allow users to get and store facts about cats (ha ha ha).
+My system will allow users to get and store word definitions.
 
 ## Entity definition
 
-### Cat fact:
-- id - integer
-- creation_date - ISO 8601 (i.e.: 2010-01-01T00:01:12.123Z+03:00)
-- modification_date - ISO 8601
-- reality_meter -  integer (0 <= x <= 5)
-- title - string (x.len() <= 50)
-- content - string (x.len() < 500)
-- language - string (x.len() <= 3)
-- author - string (x.len() < 100)
+### Word definition:
+- id - string
+- definition - string (max length: 1000)
+- examples - string[] (max array length: 10, max string length: 100)
+- shortDefinition - string (max length: 100)
+- language - string (max length: 10)
+- lexicalCategory - string (max length: 100)
 
 
 ## API definition
-- GET /api/v1/fact/{fact_id} - gets fact by its id
-- GET /api/v1/facts - gets all facts
-- GET /api/v1/author/{author_id}/facts - gets all facts of this author
-- POST /api/v1/fact - adds new cat fact to the system
-- PUT /api/v1/fact/{fact_id} - modifies existing cat fact
-- DELETE /api/v1/fact/{fact_id} - deletes cat fact from the system
+- GET /api/v1/definition/{word_id} - gets definition by word id
+- GET /api/v1/definitions/{language} - gets all stored word definition by language id
+- POST /api/v1/definition - adds new word definition to the system
+- PUT /api/v1/definition - modifies existing word definition
+- DELETE /api/v1/definition/{word_id} - deletes word definition from the system
 
 - [x] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
