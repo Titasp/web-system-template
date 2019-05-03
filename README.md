@@ -39,9 +39,7 @@ My system will allow users to get and store word definitions.
 - [x] Should return all 5xx errors in unified format. Define format using `joi` language
 
 ## UI definition
-![](https://ibb.co/sRhyMxk)
-
-https://ibb.co/sRhyMxk
+![](view_wireframe.png)
 
 - [X] Define the structure of how visually the WEB system is going to look like
 - [X] Should have at least one view defined with https://wireframe.cc (or other wireframe tool):
